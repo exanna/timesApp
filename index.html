@@ -17,9 +17,15 @@
         <span class="header__timer timer"></span>
     </header>
     <main class="app">
-        <div class="app__wraper">
-            <input type="date" class="app__date-start">
-            <input type="date" class="app__date-end">
+        <div class="app__wrapper">
+            <div class="date-div">
+                <label for="date-start">Date start: </label>
+                <input type="date" name="date-start" class="date app__date-start">
+            </div>
+            <div class="date-div">
+                <label for="date-end">Date end: </label>
+                <input type="date" name="date-end" class="date app__date-end">
+            </div>
             <button class="app__btn">Show result</button>
         </div>
         <div class="app__result">
@@ -27,6 +33,8 @@
             <span class="app__hours"></span>
             <span class="app__minutes"></span>
             <span class="app__seconds"></span>
+            <span class="result__info"></span>
+
         </div>
     </main>
     <footer class="footer">
