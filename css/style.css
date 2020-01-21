@@ -18,6 +18,9 @@
 body {
     font-family: 'Open Sans', sans-serif;     
     color: var(--font-color);
+    max-width: 400px;
+    max-height: 800px;
+    margin: 0 auto;
 }
 
 .page {
@@ -33,7 +36,6 @@ body {
 .header {
     display: flex;
     justify-content: space-around;
-    padding: 20px 0 20px 0;
 }
 
 .logo {
@@ -66,7 +68,7 @@ body {
 
 /* main */
 .app {
-    min-height: 60vh;
+    min-height: 65%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,7 +82,7 @@ body {
 }
 
 .date-div  {
-    padding: 10px;
+    padding: 5px;
     font-size: 1.5rem;    
 }
 
@@ -108,12 +110,13 @@ body {
 
 .app__btn {
     width: 50%;
-    border-radius: 5px;
-    border-color: var(--second-color);
+    border-radius: 15px;
+    border-color: transparent;
     padding: 5px 10px;
     background-color: var(--theme-color);
     color: var(--font-color);
     cursor: pointer;
+    margin-top: 10px;
 }
 
 .app__btn:focus {
@@ -121,20 +124,73 @@ body {
 }
 
 /* result */
-.app__result {
-    min-height: 50%;
+.app__result {    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 5px solid var(--second-color);
+    border: 3px solid var(--second-color);
     border-radius: 30px;
-    font-size: 1.4rem;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+.app__result > * {
+    padding: 3px;
 }
 
 /* footer */
 .footer {
     display: flex;
     justify-content: space-between;
+    font-size: 1.2rem;
+    padding: 0 40px;
 }
 
+@media (min-height: 600px) {
+    :root {
+        font-size: 12px;
+    }
+    
+    .app__result {    
+        padding: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        margin-top: 50px;
+        max-width: 600px;
+    }
+    .timer {
+        font-size: 3rem;
+    }
+    .logo--big {
+        font-size: 3rem;
+    }
+
+    .date-div  {
+        padding: 5px;
+        font-size: 2.5rem;    
+    }
+
+    .date {    
+        width: 250px;
+        font-size: 2.5rem;
+    }
+
+    .app__btn {
+        margin-top: 40px;
+        font-size: 2.5rem;    
+    }
+    .app__result {    
+        font-size: 2rem;
+        padding: 20px;
+    }
+
+    /* footer */
+    .footer {    
+        padding: 0 100px;
+        font-size: 1.5rem;    
+    }
+}
